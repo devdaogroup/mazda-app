@@ -1,7 +1,8 @@
-import Header from "./Header";
 import React from "react";
 import dynamic from "next/dynamic";
-import Footer from "./Footer";
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
+
 
 type Props = { children: React.ReactNode; title: string };
 const Layout: React.FC<Props> = ({ children, title }) => {
@@ -10,7 +11,7 @@ const Layout: React.FC<Props> = ({ children, title }) => {
       <head>
         <title>{title}</title>
       </head>
-      <Header />
+      <Navbar />
       <div className="pt-[70px] min-h-screen container mx-auto max-w-7xl">
         {children}
       </div>
