@@ -2,8 +2,9 @@ import React from 'react';
 import DynamicInput from "@/components/extras/DynamicInput";
 import {InputProps} from "@/types/FormTypes";
 
+
 const Form = () => {
-    const inputProps:InputProps[] = [
+    const inputProps: InputProps[] = [
         {
             name: 'field1',
             label: 'Field 1',
@@ -40,7 +41,7 @@ const Form = () => {
             ],
         },
     ];
-    const handleFormSubmit = (data: object) => {
+    const handleFormSubmit = (data: Record<string, any>) => {
         console.log('Submitted Data:', data);
         // You can perform actions with the data here
     };

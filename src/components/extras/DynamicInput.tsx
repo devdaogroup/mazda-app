@@ -2,29 +2,8 @@ import React from 'react';
 import {Controller, useForm} from 'react-hook-form';
 import * as yup from 'yup';
 import {yupResolver} from '@hookform/resolvers/yup';
+import {DynamicInputProps} from "@/types/FormTypes";
 
-type InputType = 'text' | 'dropdown' | 'radio' | 'checkbox';
-
-type InputOption = {
-    value: string;
-    label: string;
-};
-
-type InputProps = {
-    name: string;
-    label: string;
-    type: InputType;
-    options?: InputOption[];
-    regex?: RegExp;
-    regexErrorMessage?: string;
-    requiredErrorMessage?: string;
-    validation?: yup.StringSchema<string>;
-};
-
-type DynamicInputProps = {
-    inputProps: InputProps[];
-    onSubmitCallback: (data: Record<string, any>) => void;
-};
 
 
 const DynamicInput: React.FC<DynamicInputProps> = ({inputProps, onSubmitCallback}) => {
@@ -42,7 +21,7 @@ const DynamicInput: React.FC<DynamicInputProps> = ({inputProps, onSubmitCallback
         }, {})
     );
 
-    const {control, handleSubmit, register, formState: {errors}} = useForm<InputProps>({
+    const {control, handleSubmit, register, formState: {errors}} = useForm({
         resolver: yupResolver(validationSchema),
     });
 
@@ -77,9 +56,8 @@ const DynamicInput: React.FC<DynamicInputProps> = ({inputProps, onSubmitCallback
                                 <div key={optionIndex}>
                                     <input
                                         type="radio"
-                                        name={input.name}
                                         value={option.value}
-                                        ref={register}
+                                        {...register(input.name)}
                                     />
                                     <label>{option.label}</label>
                                 </div>
@@ -91,9 +69,8 @@ const DynamicInput: React.FC<DynamicInputProps> = ({inputProps, onSubmitCallback
                                 <div key={optionIndex}>
                                     <input
                                         type="checkbox"
-                                        name={input.name}
                                         value={option.value}
-                                        ref={register}
+                                        {...register(input.name)}
                                     />
                                     <label>{option.label}</label>
                                 </div>
