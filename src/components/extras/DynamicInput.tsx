@@ -1,98 +1,73 @@
-import React from 'react';
-import {Controller, useForm} from 'react-hook-form';
-import * as yup from 'yup';
-import {yupResolver} from '@hookform/resolvers/yup';
-import {DynamicInputProps} from "@/types/FormTypes";
+import { Controller, useForm } from "react-hook-form";
 
-
-
-const DynamicInput: React.FC<DynamicInputProps> = ({inputProps, onSubmitCallback}) => {
-    const validationSchema = yup.object().shape(
-        inputProps.reduce((schema, field) => {
-            if (field.validation) {
-                schema[field.name] = field.validation;
-            } else {
-                schema[field.name] = yup
-                    .string()
-                    .matches(field.regex || /(?:)/, field.regexErrorMessage || 'Invalid input')
-                    .required(field.requiredErrorMessage || 'This field is required');
-            }
-            return schema;
-        }, {})
-    );
-
-    const {control, handleSubmit, register, formState: {errors}} = useForm({
-        resolver: yupResolver(validationSchema),
-    });
-
-    const onSubmit = (data: Record<string, any>) => {
-        onSubmitCallback(data);
-    };
-
-    return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            {inputProps.map((input, index) => (
-                <div key={index}>
-                    <label>{input.label}</label>
-                    {input.type === 'dropdown' ? (
-                        <Controller
-                            name={input.name}
-                            control={control}
-                            render={({field}) => (
-                                <div>
-                                    <select {...field}>
-                                        {input.options?.map((option, optionIndex) => (
-                                            <option key={optionIndex} value={option.value}>
-                                                {option.label}
-                                            </option>
-                                        ))}
-                                    </select>
-                                </div>
-                            )}
-                        />
-                    ) : input.type === 'radio' ? (
-                        <div>
-                            {input.options?.map((option, optionIndex) => (
-                                <div key={optionIndex}>
-                                    <input
-                                        type="radio"
-                                        value={option.value}
-                                        {...register(input.name)}
-                                    />
-                                    <label>{option.label}</label>
-                                </div>
-                            ))}
-                        </div>
-                    ) : input.type === 'checkbox' ? (
-                        <div>
-                            {input.options?.map((option, optionIndex) => (
-                                <div key={optionIndex}>
-                                    <input
-                                        type="checkbox"
-                                        value={option.value}
-                                        {...register(input.name)}
-                                    />
-                                    <label>{option.label}</label>
-                                </div>
-                            ))}
-                        </div>
-                    ) : (
-                        <Controller
-                            name={input.name}
-                            control={control}
-                            render={({field}) => (
-                                <div>
-                                    <input {...field} />
-                                    {errors[field.name] && <p>{errors[field.name].message}</p>}
-                                </div>
-                            )}
-                        />
-                    )}
-                </div>
-            ))}
-            <button type="submit">Submit</button>
-        </form>
-    );
+export type Field = {
+  name: string;
+  label: string;
+  type: string;
+  validationRule: Record<string, string | Record<string, string>>;
+  isRequired: boolean;
 };
 
-export default DynamicInput;
+type FormFields = Field[];
+
+type FormData = Record<string, string>;
+
+export default function App({ control, handleSubmit, fields }: any) {
+  const {
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data: FormData) => {
+    console.log(data);
+  };
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="bg-white p-8 rounded-lg shadow-md max-w-md w-full"
+      >
+        {fields.map((field, index: number) => (
+          <div key={index} className="mb-4">
+            <label
+              htmlFor={field.name}
+              className="block text-sm font-medium text-gray-700"
+            >
+              {field.label}
+            </label>
+            <Controller
+              name={field.name}
+              control={control}
+              defaultValue=""
+              rules={field.validationRule}
+              render={({ field }) => (
+                <div>
+                  <input
+                    {...field}
+                    type={field.type}
+                    className="text-black w-full mt-1 p-2 rounded-md border border-gray-300 focus:ring focus:ring-indigo-500 focus:border-indigo-500"
+                    required={field.isRequired}
+                  />
+                  {errors[field.name] && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {errors[field.name].message}
+                    </p>
+                  )}
+                </div>
+              )}
+            />
+          </div>
+        ))}
+
+        <div>
+          <button
+            type="submit"
+            className="w-full bg-indigo-500 text-white font-semibold py-2 px-4 rounded-md"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+}

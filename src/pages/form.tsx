@@ -1,30 +1,47 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import DynamicFormGenerator from "@/components/extras/DynamicInput";
+import { Field, useForm } from "react-hook-form";
 
+const formFields = [
+  {
+    name: "email",
+    label: "Email",
+    type: "text",
+    validationRule: {
+      required: "Please don't leave this field empty",
+      pattern: {
+        value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+        message: "Please enter a valid email address",
+      },
+    },
+    isRequired: true,
+  },
+  {
+    name: "password",
+    label: "Password",
+    type: "password",
+    validationRule: {
+      required: "Please don't leave this field empty",
+      minLength: {
+        value: 8,
+        message: "Password must be at least 8 characters",
+      },
+    },
+    isRequired: true,
+  },
+  // Add more fields as needed
+];
 export default function App() {
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
-    console.log(errors);
+  const { control, handleSubmit } = useForm<Field>();
 
-    return (
-        <form className="bg-gray-500 p-4 rounded-xl w-[400px] h-[400px] flex flex-wrap border" onSubmit={handleSubmit(onSubmit)}>
-            <input className="border p-2 rounded-xl w-full text-black flex" type="text" placeholder="First name" {...register("First name", {required: true, maxLength: 80})} />
-            <input className="border p-2 rounded-xl w-full text-black flex" type="text" placeholder="Last name" {...register("Last name", {required: true, maxLength: 100})} />
-            <input className="border p-2 rounded-xl w-full text-black flex" type="text" placeholder="Email" {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} />
-            <input className="border p-2 rounded-xl w-full text-black flex" type="tel" placeholder="Mobile number" {...register("Mobile number", {required: true, minLength: 6, maxLength: 12})} />
-            <select className="border bg-black p-2 rounded-xl w-full flex" {...register("Title", { required: true })}>
-                <option value="Mr">Mr</option>
-                <option value="Mrs">Mrs</option>
-                <option value="Miss">Miss</option>
-                <option value="Dr">Dr</option>
-            </select>
-
-             <div className="w-full flex justify-start">
-                 <input className="border p-2 rounded-xl w-full flex" {...register("Developer", { required: true })} type="radio" value="Yes" />
-                 <input className="border p-2 rounded-xl w-full flex" {...register("Developer", { required: true })} type="radio" value="No" />
-             </div>
-
-            <input className="border p-2 rounded-xl w-full flex" type="submit" />
-        </form>
-    );
+  return (
+    <>
+      <div className="p-4">
+        <DynamicFormGenerator
+          fields={formFields}
+          control={control}
+          handleSubmit={handleSubmit}
+        />
+      </div>
+    </>
+  );
 }
