@@ -1,20 +1,18 @@
-import React from "react";
-import dynamic from "next/dynamic";
-import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
-
+import Navbar from "@/components/shared/Navbar";
+import dynamic from "next/dynamic";
+import Head from "next/head";
+import React from "react";
 
 type Props = { children: React.ReactNode; title: string };
 const Layout: React.FC<Props> = ({ children, title }) => {
   return (
     <>
-      <head>
+      <Head>
         <title>{title}</title>
-      </head>
+      </Head>
       <Navbar />
-      <div className="pt-[70px] min-h-screen container mx-auto max-w-7xl">
-        {children}
-      </div>
+      <div>{children}</div>
       <Footer />
     </>
   );
