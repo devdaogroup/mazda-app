@@ -12,7 +12,7 @@ const Layout: React.FC<Props> = ({ children, title }) => {
         <title>{title}</title>
       </head>
       <Navbar />
-      <div className="pt-[70px] min-h-screen container mx-auto max-w-7xl">
+      <div className="pt-[105px] border min-h-screen container mx-auto  max-xl:max-w-7xl">
         {children}
       </div>
       <Footer />
