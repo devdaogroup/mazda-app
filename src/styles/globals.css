@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   background: #1A1A1A;
 }
@@ -15,6 +16,7 @@
 }
 
 body {
+  font-family: 'Lexend Giga', sans-serif;
   background: linear-gradient(90deg, #1A1A1A 0%, #0D0B13 100%);
 }
 
