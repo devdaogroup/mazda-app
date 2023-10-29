@@ -70,7 +70,7 @@ const HeroSection = () => {
         </div>
 
         {/* mazda image */}
-        <div className="z-2">
+        <div className="z-2 absolute top-0 container mx-auto">
           <HeroSlider />
         </div>
       </div>

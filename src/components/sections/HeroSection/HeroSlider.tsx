@@ -17,7 +17,7 @@ const HeroSlider = () => {
         <SwiperSlide>
           <div style={{ width: "auto", height: "100vh", position: "relative" }}>
             <Image
-              src={"/img/mazda-mx-5-rf-side-view 1.png"}
+                src={"/img/mazda-mx-5-rf-side-view 1.svg"}
               alt="mazda car"
               style={{ objectFit: "contain" }}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -30,7 +30,7 @@ const HeroSlider = () => {
         <SwiperSlide>
           <div style={{ width: "auto", height: "100vh", position: "relative" }}>
             <Image
-              src={"/img/mazda-mx-5-rf-side-view 1.png"}
+              src={"/img/mazda-mx-5-rf-side-view 1.svg"}
               alt="mazda car"
               style={{ objectFit: "contain" }}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

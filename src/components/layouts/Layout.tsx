@@ -12,7 +12,7 @@ const Layout: React.FC<Props> = ({ children, title }) => {
         <title>{title}</title>
       </Head>
       <Navbar />
-      <div>{children}</div>
+      <div className="container mx-auto overflow-hidden">{children}</div>
       <Footer />
     </>
   );
