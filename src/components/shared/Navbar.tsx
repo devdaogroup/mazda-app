@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "./../../assets/img/logo.svg";
 import Profile from "./../../assets/img/profile.svg";
 import Search from "./../../assets/img/search.svg";
@@ -11,15 +12,24 @@ const Navbar = () => {
       <div className="w-4/6 flex items-center justify-center">
         <nav className="w-full flex justify-center items-center ">
           <ul className="w-fit text-white flex ">
-            <li className="px-4 py-2 duration-100 hover:border-b text-[24px]">
+            <Link
+              href="/board"
+              className="px-4 py-2 duration-100 hover:border-b text-[20px]"
+            >
               BOARDS
-            </li>
-            <li className="px-4 py-2 duration-100 hover:border-b text-[24px]">
+            </Link>
+            <Link
+              href="/"
+              className="px-4 py-2 duration-100 hover:border-b text-[20px]"
+            >
               HOME
-            </li>
-            <li className="px-4 py-2 duration-100 hover:border-b text-[24px]">
+            </Link>
+            <Link
+              href="/reel"
+              className="px-4 py-2 duration-100 hover:border-b text-[20px]"
+            >
               REELS
-            </li>
+            </Link>
           </ul>
         </nav>
       </div>
