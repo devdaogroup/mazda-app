@@ -5,6 +5,7 @@ const ChatIcon = () => {
     <>
       <Image
         src="/img/icons/Chat.png"
+        priority={true}
         alt="chat icon"
         width={175}
         height={57}

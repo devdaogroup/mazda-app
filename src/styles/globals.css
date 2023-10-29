@@ -3,6 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
   background: #1A1A1A;
 }
@@ -36,4 +37,17 @@ body::-webkit-scrollbar-thumb {
   /* roundness of the scroll thumb */
   border: 3px solid linear-gradient(90deg, #1A1A1A 0%, #0D0B13 100%);
   /* creates padding around scroll thumb */
+}
+
+.heroSlider {
+  height: 803px;
+}
+
+body {
+  cursor: url('/img/icons/cursor.png') 4 12, auto;
+}
+
+a:hover,
+button:hover {
+  cursor: url('/img/icons/pointer.png') 4 12, pointer;
 }

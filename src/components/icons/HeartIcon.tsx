@@ -6,6 +6,7 @@ const HeartIcon = () => {
       <Image
         src="/img/icons/Heart.png"
         alt="heart icon"
+        priority={true}
         width={175}
         height={57}
       />
