@@ -2,7 +2,7 @@
     font-family: 'Lexend Giga', sans-serif;
     font-size: 120px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 100;
     line-height: normal;
     mix-blend-mode: hard-light;
     display: inline-block;
@@ -13,9 +13,7 @@
     text-fill-color: transparent;
     color: transparent;
     transition: opacity 0.4s;
-    font-weight: 900;
     line-height: 1.15;
-
 }
 
 .marquee {
