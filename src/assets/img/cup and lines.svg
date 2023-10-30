@@ -98,12 +98,12 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_200_217" result="shape"/>
 </filter>
 <linearGradient id="paint0_linear_200_217" x1="959.5" y1="22" x2="959.5" y2="394" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFD400"/>
-<stop offset="1" stop-color="#FF6700"/>
+<stop stopColor="#FFD400"/>
+<stop offset="1" stopColor="#FF6700"/>
 </linearGradient>
 <linearGradient id="paint1_linear_200_217" x1="959.625" y1="2" x2="959.625" y2="264.66" gradientUnits="userSpaceOnUse">
-<stop stop-color="#D9D9D9"/>
-<stop offset="1" stop-color="#D9D9D9" stop-opacity="0.39"/>
+<stop stopColor="#D9D9D9"/>
+<stop offset="1" stopColor="#D9D9D9" stop-opacity="0.39"/>
 </linearGradient>
 </defs>
 </svg>

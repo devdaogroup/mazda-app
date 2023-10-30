@@ -1,54 +1,11 @@
 import WhatsTopIcon from "@/components/icons/WhatsTopIcon";
 import BoardTable from "@/components/sections/BoardTableSection";
+import ProfileCard from "@/components/sections/ProfileCardSection";
+import RankCard from "@/components/sections/RankCardSection";
 import RollingTextSection from "@/components/sections/RollingTextSection";
 import Touch from "@/components/sections/Touch";
+import { hardCodedData } from "@/data/RankData";
 const BoardView = () => {
-  const hardCodedData = [
-    {
-      Rank: 1,
-      UserName: "Alexander Astoni",
-      UploadedURLs: "12",
-      MINTPoint: "4563 Pt",
-      image: "/img/profile/avatar.png", // Replace with the actual URL
-    },
-    {
-      Rank: 2,
-      UserName: "Alexander Astoni",
-      UploadedURLs: "12",
-      MINTPoint: "4563 Pt",
-      image: "/img/profile/avatar.png", // Replace with the actual URL
-    },
-    {
-      Rank: 3,
-      UserName: "Alexander Astoni",
-      UploadedURLs: "12",
-      MINTPoint: "4563 Pt",
-      image: "/img/profile/avatar.png", // Replace with the actual URL
-    },
-    {
-      Rank: 4,
-      UserName: "Alexander Astoni",
-      UploadedURLs: "12",
-      MINTPoint: "4563 Pt",
-      image: "/img/profile/avatar.png", // Replace with the actual URL
-    },
-    {
-      Rank: 5,
-      UserName: "Alexander Astoni",
-      UploadedURLs: "12",
-      MINTPoint: "4563 Pt",
-      image: "/img/profile/avatar.png", // Replace with the actual URL
-    },
-    {
-      Rank: 6,
-      UserName: "Alexander Astoni",
-      UploadedURLs: "12",
-      MINTPoint: "4563 Pt",
-      image: "/img/profile/avatar.png", // Replace with the actual URL
-    },
-    // Add more data here as needed
-  ];
-
   return (
     <>
       <section>
@@ -59,10 +16,17 @@ const BoardView = () => {
         <WhatsTopIcon />
       </section>
 
-      <section>
-        <BoardTable data={hardCodedData} />
-      </section>
-      <article>2</article>
+      <div className="flex flex-col md:flex-row">
+        <div className="w-full md:w-30 p-4">
+          <BoardTable data={hardCodedData} />
+        </div>
+        <div className="w-full md:w-70 p-4">
+          <article className="flex flex-col gap-8">
+            <ProfileCard />
+            <RankCard />
+          </article>
+        </div>
+      </div>
 
       <section>
         <Touch />

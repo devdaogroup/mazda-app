@@ -8,7 +8,7 @@ const DynamicTable: React.FC<TableProps> = ({ data }) => {
   return (
     <div className="flex flex-col">
       <div className="overflow-x-auto">
-        <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+        <div className="inline-block min-w-full sm:px-6 lg:px-8">
           <div className="overflow-hidden">
             <div className="rounded-[20px] border-[5px] border-blue-500">
               <table className="min-w-full divide-y divide-gray-200">

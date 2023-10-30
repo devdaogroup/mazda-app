@@ -34,8 +34,8 @@ const WhatsTopIcon = () => {
             y2="21.9999"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#3680FF" />
-            <stop offset="1" stop-color="#100E15" />
+            <stop stopColor="#3680FF" />
+            <stop offset="1" stopColor="#100E15" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_82_16593"
@@ -45,8 +45,8 @@ const WhatsTopIcon = () => {
             y2="1.9999"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#3680FF" />
-            <stop offset="1" stop-color="#100E15" />
+            <stop stopColor="#3680FF" />
+            <stop offset="1" stopColor="#100E15" />
           </linearGradient>
         </defs>
       </svg>

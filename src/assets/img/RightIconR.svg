@@ -79,8 +79,8 @@
 <feBlend mode="normal" in2="shape" result="effect2_innerShadow_27_706"/>
 </filter>
 <linearGradient id="paint0_linear_27_706" x1="43.089" y1="21.2641" x2="11.1875" y2="18.2664" gradientUnits="userSpaceOnUse">
-<stop stop-color="#EA1C39"/>
-<stop offset="1" stop-color="#910A2D"/>
+<stop stopColor="#EA1C39"/>
+<stop offset="1" stopColor="#910A2D"/>
 </linearGradient>
 </defs>
 </svg>
