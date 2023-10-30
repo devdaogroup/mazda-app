@@ -21,16 +21,16 @@
 <feBlend mode="normal" in2="shape" result="effect2_innerShadow_30_914"/>
 </filter>
 <linearGradient id="paint0_linear_30_914" x1="15.095" y1="17.7936" x2="3.67392" y2="20.0874" gradientUnits="userSpaceOnUse">
-<stop stop-color="#0B5CD6"/>
-<stop offset="1" stop-color="#0085FF"/>
+<stop stopColor="#0B5CD6"/>
+<stop offset="1" stopColor="#0085FF"/>
 </linearGradient>
 <linearGradient id="paint1_linear_30_914" x1="33.4475" y1="12.8761" x2="22.0265" y2="15.1699" gradientUnits="userSpaceOnUse">
-<stop stop-color="#0B5CD6"/>
-<stop offset="1" stop-color="#0085FF"/>
+<stop stopColor="#0B5CD6"/>
+<stop offset="1" stopColor="#0085FF"/>
 </linearGradient>
 <linearGradient id="paint2_linear_30_914" x1="22.5654" y1="10.6388" x2="12.0573" y2="12.9761" gradientUnits="userSpaceOnUse">
-<stop stop-color="#0B5CD6"/>
-<stop offset="1" stop-color="#0085FF"/>
+<stop stopColor="#0B5CD6"/>
+<stop offset="1" stopColor="#0085FF"/>
 </linearGradient>
 </defs>
 </svg>

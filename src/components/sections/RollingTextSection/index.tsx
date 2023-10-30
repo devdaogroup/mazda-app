@@ -6,7 +6,6 @@ const index = () => {
         <span className={styles.text_weekly_board}>Weekly</span>
         <span className={styles.text_weekly_board}>Leader</span>
         <span className={styles.text_weekly_board}>Board</span>
-        <span className={styles.text_weekly_board}>.</span>
       </div>
     </div>
   );
