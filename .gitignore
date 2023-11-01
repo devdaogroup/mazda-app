@@ -34,3 +34,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .idea
+
+public/sw.js
+public/workbox-*.js
+public/robots.txt
+public/sitemap*.xml
+out.rar

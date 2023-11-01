@@ -5,11 +5,12 @@
   "scripts": {
     "dev": "next dev -p 3002",
     "build": "next build",
-    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "export": "next build && next-sitemap && next export",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
