@@ -8,40 +8,60 @@ import "swiper/css/navigation";
 // import required modules
 import Image from "next/image";
 import { Navigation } from "swiper/modules";
-import styles from "./styles.module.css";
-
+import CarImage from "@/assets/img/mazda-mx-5-rf-side-view 1.svg"
 const HeroSlider = () => {
   return (
-    <div>
-      <Swiper navigation={false} modules={[Navigation]} className="heroSlider">
+      <Swiper navigation={false} modules={[Navigation]} className="h-[800px]">
         <SwiperSlide>
-          <div style={{ width: "auto", height: "100vh", position: "relative" }}>
-            <Image
-                src={"/img/mazda-mx-5-rf-side-view 1.svg"}
-              alt="mazda car"
-              style={{ objectFit: "contain" }}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              loading="lazy"
-              fill
-            />
-          </div>
-          <p className={styles.car_details}>MAZDA MX-5 RF</p>
+            <div className="w-full flex flex-wrap  ">
+                <Image
+                    className="w-full"
+                    src={CarImage}
+                    alt="mazda car"
+                    loading="lazy"
+
+                />
+                <div className="w-full text-center text-white text-4xl">MAZDA MX-5 RF</div>
+            </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div style={{ width: "auto", height: "100vh", position: "relative" }}>
-            <Image
-              src={"/img/mazda-mx-5-rf-side-view 1.svg"}
-              alt="mazda car"
-              style={{ objectFit: "contain" }}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              loading="lazy"
-              fill
-            />
-          </div>
-          <p className={styles.car_details}>MAZDA MX-5 RF</p>
-        </SwiperSlide>
+          <SwiperSlide>
+              <div className="w-full flex flex-wrap  ">
+                  <Image
+                      className="w-full"
+                      src={CarImage}
+                      alt="mazda car"
+                      loading="lazy"
+
+                  />
+                  <div className="w-full text-center text-white text-4xl">MAZDA MX-5 RF</div>
+              </div>
+          </SwiperSlide>
+          <SwiperSlide>
+              <div className="w-full flex flex-wrap  ">
+                  <Image
+                      className="w-full"
+                      src={CarImage}
+                      alt="mazda car"
+                      loading="lazy"
+
+                  />
+                  <div className="w-full text-center text-white text-4xl">MAZDA MX-5 RF</div>
+              </div>
+          </SwiperSlide>
+          <SwiperSlide>
+              <div className="w-full flex flex-wrap  ">
+                  <Image
+                      className="w-full"
+                      src={CarImage}
+                      alt="mazda car"
+                      loading="lazy"
+
+                  />
+                  <div className="w-full text-center text-white text-4xl">MAZDA MX-5 RF</div>
+              </div>
+          </SwiperSlide>
       </Swiper>
-    </div>
+
   );
 };
 
