@@ -14,19 +14,19 @@ const Navbar = () => {
           <ul className="w-fit text-white flex ">
             <Link
               href="/board"
-              className="px-4 py-2 duration-100 hover:border-b text-[20px]"
+              className="px-4 py-2 duration-100 hover:border-b"
             >
               BOARDS
             </Link>
             <Link
               href="/"
-              className="px-4 py-2 duration-100 hover:border-b text-[20px]"
+              className="px-4 py-2 duration-100 hover:border-b"
             >
               HOME
             </Link>
             <Link
               href="/reel"
-              className="px-4 py-2 duration-100 hover:border-b text-[20px]"
+              className="px-4 py-2 duration-100 hover:border-b"
             >
               REELS
             </Link>
