@@ -2,7 +2,7 @@ import TouchImage from "@/assets/img/StayITouch.svg";
 import Image from "next/image";
 function Touch() {
   return (
-    <div className="w-full mt-16 min-h-[200px] flex flex-wrap">
+    <div className="w-full mt-16 min-h-[200px] flex  flex-wrap">
       <div className="flex justify-center items-center w-full">
         <div className="w-[300px] h-0.5 bg-gradient-to-l from-blue-500 "></div>
         <Image
@@ -16,7 +16,7 @@ function Touch() {
       </div>
 
       <div className="w-full  justify-center flex flex-wrap ">
-        <div className="bg-white flex flex-wrap flex-row items-center justify-center translate-y-5 bg-opacity-30 w-11/12 backdrop-blur-sm rounded-t-2xl border container">
+        <div className="bg-white flex flex-wrap flex-row items-center justify-evenly translate-y-5 bg-opacity-30 w-11/12 backdrop-blur-sm rounded-t-2xl border ">
           <div className=" text-white flex justify-center">
             Get the latest news by entering your email
           </div>

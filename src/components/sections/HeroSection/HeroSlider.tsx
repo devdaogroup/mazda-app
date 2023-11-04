@@ -11,7 +11,7 @@ import { Navigation } from "swiper/modules";
 import CarImage from "@/assets/img/mazda-mx-5-rf-side-view 1.svg"
 const HeroSlider = () => {
   return (
-      <Swiper navigation={false} modules={[Navigation]} className="h-[800px]">
+      <Swiper navigation={false} modules={[Navigation]} className="h-[800px] w-full">
         <SwiperSlide>
             <div className="w-full flex flex-wrap  ">
                 <Image
