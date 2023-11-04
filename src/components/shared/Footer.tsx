@@ -4,7 +4,7 @@ import Gmail from "./../../assets/img/Gmail.svg";
 import Logo from "./../../assets/img/logo.svg";
 const Footer = () => {
   return (
-    <footer className="w-full flex items-center bg-[#212121] h-[326px]">
+    <footer className="w-full container mx-auto overflow-hidden flex items-center bg-[#212121] h-[326px]">
       <div className="w-1/4 flex flex-wrap h-full content-start  justify-center p-7  ">
         <div className="w-full text-2xl py-3 flex flex-wrap items-center ">
           <Image alt={"Logo"} src={Logo} height={59} width={65} />

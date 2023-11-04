@@ -11,7 +11,7 @@ import { Navigation } from "swiper/modules";
 import CarImage from "@/assets/img/mazda-mx-5-rf-side-view 1.svg"
 const HeroSlider = () => {
   return (
-      <Swiper navigation={false} modules={[Navigation]} className="h-[800px] w-full">
+      <Swiper navigation={false} modules={[Navigation]} className="md:h-[800px] w-full">
         <SwiperSlide>
             <div className="w-full flex flex-wrap  ">
                 <Image
@@ -21,7 +21,7 @@ const HeroSlider = () => {
                     loading="lazy"
 
                 />
-                <div className="w-full text-center text-white text-4xl">MAZDA MX-5 RF</div>
+                <div className="w-full text-center text-white text-4xl hidden md:block">MAZDA MX-5 RF</div>
             </div>
         </SwiperSlide>
           <SwiperSlide>
@@ -33,7 +33,7 @@ const HeroSlider = () => {
                       loading="lazy"
 
                   />
-                  <div className="w-full text-center text-white text-4xl">MAZDA MX-5 RF</div>
+                  <div className="w-full text-center text-white text-4xl hidden md:block">MAZDA MX-5 RF</div>
               </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -45,7 +45,7 @@ const HeroSlider = () => {
                       loading="lazy"
 
                   />
-                  <div className="w-full text-center text-white text-4xl">MAZDA MX-5 RF</div>
+                  <div className="w-full text-center text-white text-4xl hidden md:block">MAZDA MX-5 RF</div>
               </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -57,7 +57,7 @@ const HeroSlider = () => {
                       loading="lazy"
 
                   />
-                  <div className="w-full text-center text-white text-4xl">MAZDA MX-5 RF</div>
+                  <div className="w-full text-center text-white text-4xl hidden md:block">MAZDA MX-5 RF</div>
               </div>
           </SwiperSlide>
       </Swiper>

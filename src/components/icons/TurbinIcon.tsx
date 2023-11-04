@@ -3,7 +3,6 @@ const TurbinIcon = () => {
     <>
       <svg
         width="730"
-        height="636"
         viewBox="0 0 730 636"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +71,6 @@ const TurbinIcon = () => {
 
       <svg
         width="730"
-        height="636"
         viewBox="0 0 730 636"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

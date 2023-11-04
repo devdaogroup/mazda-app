@@ -5,7 +5,7 @@ import Profile from "./../../assets/img/profile.svg";
 import Search from "./../../assets/img/search.svg";
 const Navbar = () => {
   return (
-    <header className="w-full flex bg-[#212121] justify-between px-3 md:px-0 shadow shadow-gray-600 h-[50px] md:h-[105px]">
+    <header className="w-full container mx-auto flex bg-[#212121] justify-between px-3 md:px-0 shadow shadow-gray-600 h-[50px] md:h-[105px]">
       <div className="md:w-1/6 flex justify-center items-center">
         <Image height={30} width={30} src={LogoMobile} alt={"mazda"} className="md:hidden"/>
         <Image height={50} width={54} src={LogoMobile} alt={"mazda"} className="hidden md:block"/>
