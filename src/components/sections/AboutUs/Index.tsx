@@ -9,7 +9,7 @@ function AboutUs() {
         <div className="w-full h-[300px] flex flex-wrap justify-center items-center ">
             <div className={`${styles.bg} h-[200px] flex w-full  justify-center`}>
                 <Image src={GiftLeft} width={32} height={44} alt={"GiftLeft"}/>
-                <Image src={AboutUsImage} width={300} height={60} alt={"AboutUsImage"}/>
+                <Image src={AboutUsImage} className="w-32 md:w-80" width={300} height={60} alt={"AboutUsImage"}/>
                 <Image src={GiftRight} width={32} height={44} alt={"GiftRight"}/>
             </div>
             <div className="w-full flex justify-center mt-5 ">
@@ -24,7 +24,7 @@ function AboutUs() {
 
                     </div>
                 </div>
-                <p className="font-bold  text-xs p-2 w-8/12 text-white">
+                <p className="font-bold text-justify md:text-start text-[9px] md:text-xs p-2 w-8/12 text-white">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     ex ea commodo consequat.

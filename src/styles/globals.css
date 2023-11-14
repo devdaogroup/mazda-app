@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  background: #1A1A1A;
+  background: linear-gradient(90deg, #1A1A1A 0%, #0D0B13 100%);
 }
 
 @media (prefers-color-scheme: dark) {
